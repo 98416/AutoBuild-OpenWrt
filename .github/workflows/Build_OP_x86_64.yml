@@ -76,7 +76,6 @@ jobs:
         [ -e package ] && mv package openwrt/package
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
-        chmod +x ./diy.sh && ./diy.sh
         cd openwrt && make defconfig
         
     - name: Download package
